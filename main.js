@@ -8,9 +8,20 @@ app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname + '/index.html'));
 })
 
-passesReqs(person, states, skills, skillLevels){
+function passesReqs(person, states, skills){
     if (states.indexOf(person.address.state) == -1) return false;
-    // TODO: more
+    console.log('sadfkljsadfj')
+    
+    var hasMatchingSkillandLevel = false;
+    for (var i = 0; i < person.skills.length; i++){
+        console.log(person.skills[i].name);console.log(person.skills[i].level);console.log('FIN')
+        if (skills.hasOwnProperty(person.skills[i].name) && skills[person.skills[i].name] == person.skills[i].level) {
+            hasMatchingSkillandLevel = true;
+        }
+    }
+    if (!hasMatchingSkillandLevel) return false;
+    
+    return true;
 }
 
 app.post('/filter', function (req, res) {
@@ -22,14 +33,18 @@ app.post('/filter', function (req, res) {
         },
         json: true
         }, (error, response, body)=>{
+            
+            states = ['Texas', 'New Jersey', 'Nebraska', 'West Virginia']
+            // key is name, level is value
+            skills = {'Enthusiasm':'Beginner', 'Responsible':'Beginner', 'Engineering': 'Beginner'}
 
             // filter over here
-            for (int i = body.length - 1; i <= 0; i--){
-                if (!passesReqs(body[i], states, skills, skillLevels))
+            for (var i = body.length - 1; i >= 0; i--){
+                if (!passesReqs(body[i], states, skills))
                     body.splice(i, 1);
             }
 
-            res.send(body[0])
+            res.send(body)
     })
 })
   
