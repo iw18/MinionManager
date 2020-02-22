@@ -1,10 +1,11 @@
 var express = require('express')
 var app = express()
+var path = require('path')
 const port = 8000
 
 // respond with "hello world" when a GET request is made to the homepage
 app.get('/', function (req, res) {
-  res.send('hello world')
+    res.sendFile(path.join(__dirname + '/index.html'));
 })
 
 passesReqs(person, states, skills, skillLevels){
