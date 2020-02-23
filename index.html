@@ -8,84 +8,100 @@
     <link href="css/style.css" rel="stylesheet" />
     <script src="js/index.js" ></script>
 
-    <form id="filterForm" action="/filter" method="post">
-    <select id="states" multiple>
-      <option value="al">Alabama</option>
-      <option value="ak">Alaska</option>
-      <option value="az">Arizona</option>
-      <option value="ar">Arkansas</option>
-      <option value="ca">California</option>
-      <option value="co">Colorado</option>
-      <option value="ct">Connecticut</option>
-      <option value="de">Delaware</option>
-      <option value="fl">Florida</option>
-      <option value="ga">Georgia</option>
-      <option value="hi">Hawaii</option>
-      <option value="id">Idaho</option>
-      <option value="il">Illinois</option>
-      <option value="in">Indiana</option>
-      <option value="ia">Iowa</option>
-      <option value="ks">Kansas</option>
-      <option value="ky">Louisiana</option>
-      <option value="me">Maine</option>
-      <option value="md">Maryland</option>
-      <option value="ma">Massachusetts</option>
-      <option value="mi">Michigan</option>
-      <option value="mn">Minnesota</option>
-      <option value="ms">Mississippi</option>
-      <option value="mo">Missouri</option>
-      <option value="mt">Montana</option>
-      <option value="ne">Nebraska</option>
-      <option value="nv">Nevada</option>
-      <option value="nh">New Hampshire</option>
-      <option value="nj">New Jersey</option>
-      <option value="nm">New Mexico</option>
-      <option value="ny">New York</option>
-      <option value="nc">North Carolina</option>
-      <option value="nd">North Dakota</option>
-      <option value="oh">Ohio</option>
-      <option value="ok">Oklahoma</option>
-      <option value="or">Oregon</option>
-      <option value="pa">Pennsylvania</option>
-      <option value="ri">Rhode Island</option>
-      <option value="sc">South Carolina</option>
-      <option value="tn">Tennessee</option>
-      <option value="tx">Texas</option>
-      <option value="ut">Utah</option>
-      <option value="vt">Vermont</option>
-      <option value="va">Virginia</option>
-      <option value="wa">Washington</option>
-      <option value="wv">West Virginia</option>
-      <option value="wi">Wisconsin</option>
-      <option value="wy">Wyoming</option>
+    <div class="title">
+      <img src="imgs/logo.png" alt="dropdown" width="1500" length="900">
+    </div>
 
-    <table>
-      <tr>
-        <th>Job Title</th>
-      </tr>
-      <tr>
-        <td><input type="checkbox"  name="Goon" value="Goon">
-           <label for="job1">Goon</label><br></td>
-       <td><input type="checkbox"  name="Financial Analyst" value="Financial Analyst">
-           <label for="job1">Financial Analyst</label><br></td>
-        <td><input type="checkbox"  name="Heavy Weapons Specialist" value="Heavy Weapons Specialist">
-           <label for="job1">Heavy Weapons Specialist</label><br></td>
-        <td><input type="checkbox"  name="Engineer" value="Engineer">
-           <label for="job1">Engineer</label><br></td>
-        <td><input type="checkbox"  name="Wizard" value="Wizard">
-            <label for="job1">Wizard</label><br></td>
-        <td><input type="checkbox"  name="Right Hand Woman" value="Right Hand Woman">
-            <label for="job1">Right Hand Woman</label><br></td>
-        <td><input type="checkbox"  name="Executioner" value="Executioner">
-            <label for="job1">Executioner</label><br></td> 
-        <td><input type="checkbox"  name="Hacker" value="Hacker">
-            <label for="job1">Hacker</label><br></td>
-        <td><input type="checkbox"  name="Manager" value="Manager">
-            <label for="job1">Manager</label><br></td>
-        <td><input type="checkbox"  name="Cook" value="Cook">
-            <label for="job1">Cook</label><br></td>
-       </tr>
-    </table>
+    <div class="dropdown">
+      <img src="imgs/dropdown.png" alt="dropdown" width="1000" length="800">
+
+      <h2 class="choose-states">CHOOSE YOUR STATE</h2>
+
+      <div>
+        <form id="filterForm" action="/filter" method="post">
+          <select class="states" id="states" multiple>
+            <option value="al">Alabama</option>
+            <option value="ak">Alaska</option>
+            <option value="az">Arizona</option>
+            <option value="ar">Arkansas</option>
+            <option value="ca">California</option>
+            <option value="co">Colorado</option>
+            <option value="ct">Connecticut</option>
+            <option value="de">Delaware</option>
+            <option value="fl">Florida</option>
+            <option value="ga">Georgia</option>
+            <option value="hi">Hawaii</option>
+            <option value="id">Idaho</option>
+            <option value="il">Illinois</option>
+            <option value="in">Indiana</option>
+            <option value="ia">Iowa</option>
+            <option value="ks">Kansas</option>
+            <option value="ky">Louisiana</option>
+            <option value="me">Maine</option>
+            <option value="md">Maryland</option>
+            <option value="ma">Massachusetts</option>
+            <option value="mi">Michigan</option>
+            <option value="mn">Minnesota</option>
+            <option value="ms">Mississippi</option>
+            <option value="mo">Missouri</option>
+            <option value="mt">Montana</option>
+            <option value="ne">Nebraska</option>
+            <option value="nv">Nevada</option>
+            <option value="nh">New Hampshire</option>
+            <option value="nj">New Jersey</option>
+            <option value="nm">New Mexico</option>
+            <option value="ny">New York</option>
+            <option value="nc">North Carolina</option>
+            <option value="nd">North Dakota</option>
+            <option value="oh">Ohio</option>
+            <option value="ok">Oklahoma</option>
+            <option value="or">Oregon</option>
+            <option value="pa">Pennsylvania</option>
+            <option value="ri">Rhode Island</option>
+            <option value="sc">South Carolina</option>
+            <option value="tn">Tennessee</option>
+            <option value="tx">Texas</option>
+            <option value="ut">Utah</option>
+            <option value="vt">Vermont</option>
+            <option value="va">Virginia</option>
+            <option value="wa">Washington</option>
+            <option value="wv">West Virginia</option>
+            <option value="wi">Wisconsin</option>
+            <option value="wy">Wyoming</option>
+          </select>
+        </form>
+      </div>
+      
+    </div>
+
+    <form style="padding-left: 5%;" id="filterForm" action="/filter" method="post">
+      <table>
+        <tr>
+          <th>Job Title</th>
+        </tr>
+        <tr>
+          <td><input type="checkbox"  name="Goon" value="Goon">
+            <label for="job1">Goon</label><br></td>
+        <td><input type="checkbox"  name="Financial Analyst" value="Financial Analyst">
+            <label for="job1">Financial Analyst</label><br></td>
+          <td><input type="checkbox"  name="Heavy Weapons Specialist" value="Heavy Weapons Specialist">
+            <label for="job1">Heavy Weapons Specialist</label><br></td>
+          <td><input type="checkbox"  name="Engineer" value="Engineer">
+            <label for="job1">Engineer</label><br></td>
+          <td><input type="checkbox"  name="Wizard" value="Wizard">
+              <label for="job1">Wizard</label><br></td>
+          <td><input type="checkbox"  name="Right Hand Woman" value="Right Hand Woman">
+              <label for="job1">Right Hand Woman</label><br></td>
+          <td><input type="checkbox"  name="Executioner" value="Executioner">
+              <label for="job1">Executioner</label><br></td> 
+          <td><input type="checkbox"  name="Hacker" value="Hacker">
+              <label for="job1">Hacker</label><br></td>
+          <td><input type="checkbox"  name="Manager" value="Manager">
+              <label for="job1">Manager</label><br></td>
+          <td><input type="checkbox"  name="Cook" value="Cook">
+              <label for="job1">Cook</label><br></td>
+        </tr>
+      </table>
     
 
     <table>

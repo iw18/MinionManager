@@ -7,9 +7,14 @@
 .title{
   padding-top: 5%;
   padding-bottom: 5%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width:50%;
 }
 
 .dropdown{
+  padding-left: 10%;
   position: relative;
   width:100%;
 }
@@ -18,7 +23,7 @@
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 50px;
   position: absolute; 
-  padding-left: 5%;
+  padding-left: 13%;
   top: 150px; 
   left: 0; 
   width: 100%; 
@@ -29,10 +34,12 @@
   font-size: 50px;
   position: absolute; 
   padding-left: 5%;
+  margin-top: 50pt;
+  margin-left: 200pt;
   top: 250px; 
   left: 50px; 
-  width: 50%; 
-  height: 400px;
+  width: 30%; 
+  height: 450px;
 }
 
 html{
