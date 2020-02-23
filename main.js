@@ -21,7 +21,7 @@ app.get('/', function (req, res) {
 
 function passesReqs(person, states, skills, jobApplications){
 
-    if (states.indexOf(person.address.state) == -1) return false;
+    /*if (states.indexOf(person.address.state) == -1) return false;
     
     var hasMatchingSkillandLevel = false;
     for (var i = 0; i < person.skills.length; i++){
@@ -30,7 +30,7 @@ function passesReqs(person, states, skills, jobApplications){
         }
     }
     if (!hasMatchingSkillandLevel) return false;
-    
+   */ 
     if (!jobApplications.find(element => element.personId == person.id)) return false;
     
     return true;
@@ -48,7 +48,6 @@ app.post('/filter', function (req, res) {
         json: true
         }, (error, response, body)=>{
             jobApplications = body
-            /////////////////////////////
     request.get('https://hackicims.com/api/v1/companies/141/people', {
         auth: {
             bearer: '996855af2954a57fe8e0285a74136151aa7c3b388cf075cf05b127202217dcebacf3558a7fcd6de1943769da66a196d165bdb8286ffb20482fd702c2cc9a6f98'
@@ -56,28 +55,51 @@ app.post('/filter', function (req, res) {
         json: true
         }, (error, response, body)=>{
         
-            // TODO: jobs thing
-            
-            states = ['Texas', 'New Jersey', 'Nebraska', 'West Virginia']
-            // key is name, level is value
-            skills = {}
-            for (var key in req.body){
-                skills[key] = []
-                var value = body[key];
-                if (typeof(value) == 'object' && value.indexOf('beg') != -1) skills[key].push('Beginner')
-                if (typeof(value) == 'object' && value.indexOf('med') != -1) skills[key].push('Advanced')
-                if (typeof(value) == 'object' && value.indexOf('adv') != -1) skills[key].push('Expert')
-            }
+            people = body
 
-            // filter over here
-            for (var i = body.length - 1; i >= 0; i--){
-                if (!passesReqs(body[i], states, skills, jobApplications))
-                    body.splice(i, 1);
-            }
+            request.get('https://hackicims.com/api/v1/companies/141/jobs', {
+                auth: {
+                    bearer: '996855af2954a57fe8e0285a74136151aa7c3b388cf075cf05b127202217dcebacf3558a7fcd6de1943769da66a196d165bdb8286ffb20482fd702c2cc9a6f98'
+                },
+                json: true
+            }, (error, response, body)=>{
+                jobs = body;
+                var jobsArray = [];
+                for (var i = jobs.length - 1; i >= 0;i--){
+                    if (req.body.jobs.indexOf(jobs[i].title) == -1){
+                        jobsArray.push(jobs.id)
+//                        jobs.splice(i, 1); // i think i did this right
+                    }
+                }
 
-            res.send(body);
-    })
-            ////////////////////////////
+                for (var i = jobApplications.length - 1; i >= 0; i--){
+                    if (jobsArray.indexOf(jobApplications.jobId) == -1){
+                        jobApplications.splice(i, 1);
+                    }
+                }
+
+                var states = ['New York']
+
+                // key is name, level is value
+                // this is just conversions
+                skills = {}
+                for (var key in req.body){
+                    skills[key] = []
+                    var value = body[key];
+                    if (typeof(value) == 'object' && value.indexOf('beg') != -1) skills[key].push('Beginner')
+                    if (typeof(value) == 'object' && value.indexOf('med') != -1) skills[key].push('Advanced')
+                    if (typeof(value) == 'object' && value.indexOf('adv') != -1) skills[key].push('Expert')
+                }
+
+                // filter over here
+                for (var i = people.length - 1; i >= 0; i--){
+                    if (!passesReqs(people[i], states, skills, jobApplications))
+                        people.splice(i, 1);
+                }
+
+            res.send(people);
+            })
+        })
     })
     
     
