@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 744.09448819 1052.3622047"
+   id="svg6765"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="logos.svg">
+  <defs
+     id="defs6767" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.979899"
+     inkscape:cx="392.00974"
+     inkscape:cy="858.5252"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1856"
+     inkscape:window-height="1057"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata6770">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="opacity:1;fill:#dd2222;fill-opacity:1;stroke:none;stroke-width:3.5999999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 435.22099,75.759481 c -1.55058,3.24581 -3.7787,10.5026 -6.6196,14.69155 -2.8409,4.18896 -6.29458,5.31007 -10.88636,5.42737 -1.92336,5.685999 -10.00475,13.399119 0.83068,12.747879 10.83543,-0.65125 18.60763,-11.249259 16.67528,-32.866799 z"
+       id="rect7342-5-7"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cscsc" />
+    <path
+       style="opacity:1;fill:#dd2222;fill-opacity:1;stroke:none;stroke-width:3.5999999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 341.1343,80.305163 c 1.82898,2.946885 4.45715,9.535358 7.80812,13.338527 3.35096,3.803167 7.42473,4.821027 12.84093,4.927527 2.26869,5.162343 11.80105,12.165113 -0.97983,11.573853 C 348.02266,109.5538 338.85501,99.931817 341.1343,80.305163 Z"
+       id="rect7342-9"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cscsc" />
+    <path
+       style="opacity:1;fill:#dd2222;fill-opacity:1;stroke:none;stroke-width:3.5999999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 173.08639,75.254401 c -1.55058,3.245811 -3.7787,10.502605 -6.6196,14.691555 -2.8409,4.188956 -6.29458,5.310065 -10.88636,5.427368 -1.92336,5.685996 -10.00475,13.399116 0.83068,12.747876 10.83543,-0.65125 18.60763,-11.249259 16.67528,-32.866799 z"
+       id="rect7342-5"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cscsc" />
+    <path
+       style="opacity:1;fill:#dd2222;fill-opacity:1;stroke:none;stroke-width:3.5999999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 74.942779,83.625916 c 1.828976,2.946885 4.457147,9.535358 7.808119,13.338527 3.350958,3.803167 7.424732,4.821027 12.840936,4.927527 2.26869,5.16234 11.801046,12.16511 -0.979831,11.57385 C 81.831134,112.87455 72.66349,103.25257 74.942779,83.625916 Z"
+       id="rect7342"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cscsc" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:13.75px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="90.714287"
+       y="147.3622"
+       id="text7313"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan7315"
+         x="90.714287"
+         y="147.3622"
+         style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-size:80px;font-family:'AR DARLING';-inkscape-font-specification:'AR DARLING Thin'">Minion Manager</tspan></text>
+  </g>
+</svg>
