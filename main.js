@@ -4,6 +4,8 @@ var path = require('path')
 const port = 8000
 const request = require('request')
 
+app.use(express.json());
+app.use("/imgs", express.static(__dirname + "/imgs"));
 app.use("/css", express.static(__dirname + "/css"));
 app.use("/js", express.static(__dirname + "/js"));
 
@@ -31,7 +33,6 @@ function passesReqs(person, states, skills, jobApplications){
 
 app.post('/filter', function (req, res) {
     // TODO: choose those that actually applied for the job
-    
     var jobApplications;
     // get applications so u can ??
     request.get('https://hackicims.com/api/v1/companies/141/applications', {

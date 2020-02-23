@@ -9,6 +9,7 @@
     <script src="js/index.js" ></script>
     <label for="cars">STATE:<br></label>
 
+    <form id="filterForm" action="/filter" method="post">
     <select id="states" multiple>
       <option value="al">Alabama</option>
       <option value="ak">Alaska</option>
@@ -65,26 +66,26 @@
         <th>Job Title</th>
       </tr>
       <tr>
-        <td><input type="checkbox" id="job1" name="job1" value="job1">
+        <td><input type="checkbox"  name="Goon" value="Goon">
            <label for="job1">Goon</label><br></td>
-       <td><input type="checkbox" id="job1" name="job1" value="job1">
+       <td><input type="checkbox"  name="Financial Analyst" value="Financial Analyst">
            <label for="job1">Financial Analyst</label><br></td>
-        <td><input type="checkbox" id="job1" name="job1" value="job1">
+        <td><input type="checkbox"  name="Heavy Weapons Specialist" value="Heavy Weapons Specialist">
            <label for="job1">Heavy Weapons Specialist</label><br></td>
-        <td><input type="checkbox" id="job1" name="job1" value="job1">
+        <td><input type="checkbox"  name="Engineer" value="Engineer">
            <label for="job1">Engineer</label><br></td>
-        <td><input type="checkbox" id="job1" name="job1" value="job1">
+        <td><input type="checkbox"  name="Wizard" value="Wizard">
             <label for="job1">Wizard</label><br></td>
-        <td><input type="checkbox" id="job1" name="job1" value="job1">
+        <td><input type="checkbox"  name="Right Hand Woman" value="Right Hand Woman">
             <label for="job1">Right Hand Woman</label><br></td>
-        <td><input type="checkbox" id="job1" name="job1" value="job1">
+        <td><input type="checkbox"  name="Executioner" value="Executioner">
             <label for="job1">Executioner</label><br></td> 
-        <td><input type="checkbox" id="job1" name="job1" value="job1">
+        <td><input type="checkbox"  name="Hacker" value="Hacker">
             <label for="job1">Hacker</label><br></td>
-        <td><input type="checkbox" id="job1" name="job1" value="job1">
+        <td><input type="checkbox"  name="Manager" value="Manager">
             <label for="job1">Manager</label><br></td>
-        <td><input type="checkbox" id="job1" name="job1" value="job1">
-            <label for="job1">Cook</label><br></td>   
+        <td><input type="checkbox"  name="Cook" value="Cook">
+            <label for="job1">Cook</label><br></td>
        </tr>
     </table>
     
@@ -97,106 +98,114 @@
         <th>Advanced</th>
       </tr>
       <tr>
-        <td><input type="checkbox" id="skill1" name="skill1" value="Bike" onclick = "handler('1')">
+        <td><input type="checkbox" id="skill1" name="skill1" value="Bike" onclick="handler('1')">
           <label for="skill1">Enthusiasm</label><br></td>
-        <td><input type="checkbox" id="beg1" name="beg" value="beg" onclick = "handler1('1')">
+        <td><input type="checkbox" id="beg1" name="beg" value="beg" onclick="handler1('1')">
           <label for="beg"></label><br></td>
-        <td><input type="checkbox" id="med1" name="med" value="med"  onclick = "handler1('1')">
+        <td><input type="checkbox" id="med1" name="med" value="med"  onclick="handler1('1')">
           <label for="med"></label><br></td>
-        <td><input type="checkbox" id="adv1" name="adv" value="adv"  onclick = "handler1('1')">
+        <td><input type="checkbox" id="adv1" name="adv" value="adv"  onclick="handler1('1')">
           <label for="adv"></label><br></td>                    
       </tr>
       <tr>
-        <td><input type="checkbox" id="skill2" name="skill2" value="Bike" onclick = "handler('2')">
+        <td><input type="checkbox" id="skill2" name="skill2" value="Bike" onclick="handler('2')">
           <label for="skill2">Programming</label><br></td>
-        <td><input type="checkbox" id="beg2" name="beg" value="beg" onclick = "handler1('2')">
+        <td><input type="checkbox" id="beg2" name="beg" value="beg" onclick="handler1('2')">
           <label for="beg"></label><br></td>
-        <td><input type="checkbox" id="med2" name="med" value="med" onclick = "handler1('2')">
+        <td><input type="checkbox" id="med2" name="med" value="med" onclick="handler1('2')">
           <label for="med"></label><br></td>
-        <td><input type="checkbox" id="adv2" name="adv" value="adv"  onclick = "handler1('2')">
+        <td><input type="checkbox" id="adv2" name="adv" value="adv"  onclick="handler1('2')">
           <label for="adv"></label><br></td>  
       </tr>
       <tr>
-        <td><input type="checkbox" id="skill3" name="skill3" value="Bike" onclick = "handler('3')">
+        <td><input type="checkbox" id="skill3" name="skill3" value="Bike" onclick="handler('3')">
           <label for="skill3">Alchemy</label><br></td>
-        <td><input type="checkbox" id="beg3" name="beg" value="beg" onclick = "handler1('3')">
+        <td><input type="checkbox" id="beg3" name="beg" value="beg" onclick="handler1('3')">
           <label for="beg"></label><br></td>
-        <td><input type="checkbox" id="med3" name="med" value="med" onclick = "handler1('3')">
+        <td><input type="checkbox" id="med3" name="med" value="med" onclick="handler1('3')">
           <label for="med"></label><br></td>
-        <td><input type="checkbox" id="adv3" name="adv" value="adv" onclick = "handler1('3')">
+        <td><input type="checkbox" id="adv3" name="adv" value="adv" onclick="handler1('3')">
           <label for="adv"></label><br></td>  
       </tr>
       <tr>
-        <td><input type="checkbox" id="skill4" name="skill4" value="Bike" onclick = "handler('4')">
+        <td><input type="checkbox" id="skill4" name="skill4" value="Bike" onclick="handler('4')">
           <label for="skill4">Lack of Critical Thinking</label><br></td>
-        <td><input type="checkbox" id="beg4" name="beg" value="beg" onclick = "handler1('4')">
+        <td><input type="checkbox" id="beg4" name="beg" value="beg" onclick="handler1('4')">
           <label for="beg"></label><br></td>
-        <td><input type="checkbox" id="med4" name="med" value="med" onclick = "handler1('4')">
+        <td><input type="checkbox" id="med4" name="med" value="med" onclick="handler1('4')">
           <label for="med"></label><br></td>
-        <td><input type="checkbox" id="adv4" name="adv" value="adv" onclick = "handler1('4')">
+        <td><input type="checkbox" id="adv4" name="adv" value="adv" onclick="handler1('4')">
           <label for="adv"></label><br></td>  
       </tr>
       <tr>
-        <td><input type="checkbox" id="skill5" name="skill5" value="Bike" onclick = "handler('5')">
+        <td><input type="checkbox" id="skill5" name="skill5" value="Bike" onclick="handler('5')">
           <label for="skill5">Data Analysis</label><br></td>
-        <td><input type="checkbox" id="beg5" name="beg" value="beg" onclick = "handler1('5')">
+        <td><input type="checkbox" id="beg5" name="beg" value="beg" onclick="handler1('5')">
           <label for="beg"></label><br></td>
-        <td><input type="checkbox" id="med5" name="med" value="med" onclick = "handler1('5')">
+        <td><input type="checkbox" id="med5" name="med" value="med" onclick="handler1('5')">
           <label for="med"></label><br></td>
-        <td><input type="checkbox" id="adv5" name="adv" value="adv" onclick = "handler1('5')">
+        <td><input type="checkbox" id="adv5" name="adv" value="adv" onclick="handler1('5')">
           <label for="adv"></label><br></td>  
       </tr>
       <tr>
-        <td><input type="checkbox" id="skill6" name="skill6" value="Bike" onclick = "handler('6')">
+        <td><input type="checkbox" id="skill6" name="skill6" value="Bike" onclick="handler('6')">
           <label for="skill6">Engineering</label><br></td>
-        <td><input type="checkbox" id="beg6" name="beg" value="beg" onclick = "handler1('6')">
+        <td><input type="checkbox" id="beg6" name="beg" value="beg" onclick="handler1('6')">
           <label for="beg"></label><br></td>
-        <td><input type="checkbox" id="med6" name="med" value="med" onclick = "handler1('6')">
+        <td><input type="checkbox" id="med6" name="med" value="med" onclick="handler1('6')">
           <label for="med"></label><br></td>
-        <td><input type="checkbox" id="adv6" name="adv" value="adv" onclick = "handler1('6')">
+        <td><input type="checkbox" id="adv6" name="adv" value="adv" onclick="handler1('6')">
           <label for="adv"></label><br></td>  
       </tr>
       <tr>
-        <td><input type="checkbox" id="skill7" name="skill7" value="Bike" onclick = "handler('7')">
+        <td><input type="checkbox" id="skill7" name="skill7" value="Bike" onclick="handler('7')">
           <label for="skill7">Muscles</label><br></td>
-        <td><input type="checkbox" id="beg7" name="beg" value="beg" onclick = "handler1('7')">
+        <td><input type="checkbox" id="beg7" name="beg" value="beg" onclick="handler1('7')">
           <label for="beg"></label><br></td>
-        <td><input type="checkbox" id="med7" name="med" value="med" onclick = "handler1('7')">
+        <td><input type="checkbox" id="med7" name="med" value="med" onclick="handler1('7')">
           <label for="med"></label><br></td>
-        <td><input type="checkbox" id="adv7" name="adv" value="adv" onclick = "handler1('7')">
+        <td><input type="checkbox" id="adv7" name="adv" value="adv" onclick="handler1('7')">
           <label for="adv"></label><br></td>  
       </tr>
       <tr>
-        <td><input type="checkbox" id="skill8" name="skill8" value="Bike" onclick = "handler('8')">
+        <td><input type="checkbox" id="skill8" name="skill8" value="Bike" onclick="handler('8')">
           <label for="skill8">Oral Communication</label><br></td>
-        <td><input type="checkbox" id="beg8" name="beg" value="beg" onclick = "handler1('8')">
+        <td><input type="checkbox" id="beg8" name="beg" value="beg" onclick="handler1('8')">
           <label for="beg"></label><br></td>
-        <td><input type="checkbox" id="med8" name="med" value="med" onclick = "handler1('8')">
+        <td><input type="checkbox" id="med8" name="med" value="med" onclick="handler1('8')">
           <label for="med"></label><br></td>
-        <td><input type="checkbox" id="adv8" name="adv" value="adv" onclick = "handler1('8')">
+        <td><input type="checkbox" id="adv8" name="adv" value="adv" onclick="handler1('8')">
           <label for="adv"></label><br></td>  
       </tr>
       <tr>
-        <td><input type="checkbox" id="skill9" name="skill9" value="Bike" onclick = "handler('9')">
+        <td><input type="checkbox" id="skill9" name="skill9" value="Bike" onclick="handler('9')">
           <label for="skill9">Problem Solving</label><br></td>
-        <td><input type="checkbox" id="beg9" name="beg" value="beg" onclick = "handler1('9')">
+        <td><input type="checkbox" id="beg9" name="beg" value="beg" onclick="handler1('9')">
           <label for="beg"></label><br></td>
-        <td><input type="checkbox" id="med9" name="med" value="med" onclick = "handler1('9')">
+        <td><input type="checkbox" id="med9" name="med" value="med" onclick="handler1('9')">
           <label for="med"></label><br></td>
-        <td><input type="checkbox" id="adv9" name="adv" value="adv" onclick = "handler1('9')">
+        <td><input type="checkbox" id="adv9" name="adv" value="adv" onclick="handler1('9')">
           <label for="adv"></label><br></td>  
       </tr>
       <tr>
-        <td><input type="checkbox" id="skill10" name="skill10" value="Bike" onclick = "handler('10')">
+        <td><input type="checkbox" id="skill10" name="skill10" value="Bike" onclick="handler('10')">
           <label for="skill10">Cooking</label><br></td>
-        <td><input type="checkbox" id="beg10" name="beg" value="beg" onclick = "handler1('10')">
+        <td><input type="checkbox" id="beg10" name="beg" value="beg" onclick="handler1('10')">
           <label for="beg"></label><br></td>
-        <td><input type="checkbox" id="med10" name="med" value="med" onclick = "handler1('10')">   
+        <td><input type="checkbox" id="med10" name="med" value="med" onclick="handler1('10')">   
           <label for="med"></label><br></td>
-        <td><input type="checkbox" id="adv10" name="adv" value="adv" onclick = "handler1('10')">
+        <td><input type="checkbox" id="adv10" name="adv" value="adv" onclick="handler1('10')">
           <label for="adv"></label><br></td>  
       </tr>
     </table>
+    <input type="button" onclick="submitForm()" value="Submit form">
+    </form>
+
+  <script>
+  function submitForm() {
+    document.getElementById("filterForm").submit();
+  }
+  </script>
 
   </head>
 
