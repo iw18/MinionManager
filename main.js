@@ -4,6 +4,9 @@ var path = require('path')
 const port = 8000
 const request = require('request')
 
+app.use("/css", express.static(__dirname + "/css"));
+app.use("/js", express.static(__dirname + "/js"));
+
 // respond with "hello world" when a GET request is made to the homepage
 app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname + '/index.html'));
