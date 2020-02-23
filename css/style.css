@@ -62,7 +62,7 @@
   margin-top: 50pt;
   margin-left: 100pt;
   top: 70%; 
-  left: 30%; 
+  left: 33%; 
   width: 20%; 
   height: 300px;
 }
@@ -73,9 +73,9 @@
   position: absolute; 
   padding-left: 5%;
   margin-top: 50pt;
-  margin-left: 300pt;
+  margin-left: 50%;
   top: 70%; 
-  left: 48%; 
+  left: 30%; 
   width: 20%; 
   height: 30px;
 }
