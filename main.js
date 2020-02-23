@@ -74,7 +74,8 @@ app.post('/filter', function (req, res) {
                 jobs = body;
                 
                 // empty responses should input nothing TODO: 400 error
-                
+                if (req.body.jobs == undefined) {res.send(''); return;}
+                if (req.body.states == undefined) {res.send(''); return;}
                 
                 var jobsArray = [];
                 for (var i = jobs.length - 1; i >= 0;i--){
