@@ -25,7 +25,7 @@ function passesReqs(person, states, skills, jobApplications){
     
     var hasMatchingSkillandLevel = false;
     for (var i = 0; i < person.skills.length; i++){
-        if (skills.hasOwnProperty(person.skills[i].name) && skills[person.skills[i].name] == person.skills[i].level) {
+        if (skills.hasOwnProperty(person.skills[i].name) && skills[person.skills[i].name].indexOf(person.skills[i].level) != -1) {
             hasMatchingSkillandLevel = true;
         }
     }
@@ -55,11 +55,19 @@ app.post('/filter', function (req, res) {
         },
         json: true
         }, (error, response, body)=>{
+        
+            // TODO: jobs thing
             
-            // TODO: get passed in form response and replace these static values.
             states = ['Texas', 'New Jersey', 'Nebraska', 'West Virginia']
             // key is name, level is value
-            skills = {'Enthusiasm':'Beginner', 'Responsible':'Beginner', 'Engineering': 'Beginner'}
+            skills = {}
+            for (var key in req.body){
+                skills[key] = []
+                var value = body[key];
+                if (typeof(value) == 'object' && value.indexOf('beg') != -1) skills[key].push('Beginner')
+                if (typeof(value) == 'object' && value.indexOf('med') != -1) skills[key].push('Advanced')
+                if (typeof(value) == 'object' && value.indexOf('adv') != -1) skills[key].push('Expert')
+            }
 
             // filter over here
             for (var i = body.length - 1; i >= 0; i--){
@@ -67,7 +75,7 @@ app.post('/filter', function (req, res) {
                     body.splice(i, 1);
             }
 
-            res.send(body)
+            res.send(body);
     })
             ////////////////////////////
     })
