@@ -1,25 +1,113 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <br><br>
+  <head>
+    <style>
+      .img-container {
+        text-align: center;
+        display: block;
+      }
+
+      .header {
+        text-align: center;
+        font-size: 110%;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+
+      .container{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+      }
+
+      .flex-container {
+
+        display: flex;
+      }
+
+      .flex-container > div {
+        margin: 10px;
+        padding: 20px;
+        font-size: 30px;
+      }
+
+      .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        padding: 10px;
+      }
+      .grid-item {
+        border: 1px solid rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        font-size: 30px;
+        text-align: center;
+      }
+
+    </style>
     <div class="title">
-        <style>
-            .img-container {
-              text-align: center;
-              display: block;
-            }
-          </style>
         <span class="img-container">
-        <img src="imgs/logo.png" alt="dropdown" width="75%" length="10%">
-    </span>
+          <img src="imgs/logo.png" alt="dropdown" width="75%" length="10%">
+        </span>
+    </div>
+  </head>
+
+  <body>
+    <h1><p class="header">CONGRATULATIONS!</p></h1>
+    <h2><p class="header">YOUR MINIONS:</p></h2>
+    <div class="container">
+      <div class="grid-container">
+        <div class="grid-item">
+          <img src="imgs/cook.png" alt="dropdown" width="200" length="200">
+          <h3>COOK</h3>
+          <h5>Always ready to cook up some mischief.</h5>
+        </div>
+        <div class="grid-item">
+          <img src="imgs/engineer.png" alt="dropdown" width="200" length="200">
+          <h3>ENGINEER</h3>
+          <h5>Engineering some crimes.</h5>
+        </div>
+        <div class="grid-item">
+          <img src="imgs/executioner.png" alt="dropdown" width="200" length="200">
+          <h3>EXECUTIONER</h3>
+          <h5>*hehe*</h5>
+        </div>
+        <div class="grid-item">
+          <img src="imgs/female.png" alt="dropdown" width="200" length="200">
+          <h3>RIGHT HAND WOMAN</h3>
+          <h5>Bow down to the real bad guy.</h5>
+        </div>
+        <div class="grid-item">
+          <img src="imgs/financial-analyst.png" alt="dropdown" width="200" length="200">
+          <h3>FINANCIAL ANALYST</h3>
+          <h5>brb stealing your money.</h5>
+        </div>
+        <div class="grid-item">
+          <img src="imgs/goon.png" alt="dropdown" width="200" length="200">
+          <h3>GOON</h3>
+          <h5>*huh.</h5>
+        </div>
+        <div class="grid-item">
+          <img src="imgs/hacker.png" alt="dropdown" width="200" length="200">
+          <h3>HACKER</h3>
+          <h5>10001110101011.</h5>
+        </div>
+        <div class="grid-item">
+          <img src="imgs/heavy-weapon.png" alt="dropdown" width="200" length="200">
+          <h3>HEAVY-WEAPON SPECIALIST</h3>
+          <h5>ka-boom</h5>
+        </div>
+        <div class="grid-item">
+          <img src="imgs/manager.png" alt="dropdown" width="200" length="200">
+          <h3>MANAGER</h3>
+          <h5>Everyone's got a boss.</h5>
+        </div>
+        <div class="grid-item">
+          <img src="imgs/wiz.png" alt="dropdown" width="200" length="200">
+          <h3>WIZARD</h3>
+          <h5>Conjuring up some bad.</h5>
+        </div>
       </div>
-</head>
-<body>
-<br><br><br>
-<h1><p style="text-align:center">CONGRATULATIONS!</p></h1>
-<h2><p style="text-align:center">Your Minions:</p></h2>
-<div style="width:17%;height:100px;border:1px solid #000;">This is a rectangle!</div>
+    </div>
 
-
-</body>
+  </body>
 </html>
