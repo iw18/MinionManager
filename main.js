@@ -49,14 +49,14 @@ app.post('/filter', function (req, res) {
     
     var jobApplications;
     // get applications so u can ??
-    request.get('https://hackicims.com/api/v1/companies/141/applications', {
+    request.get('https://hackicims.com/api/v1/companies/144/applications', {
         auth: {
             bearer: '996855af2954a57fe8e0285a74136151aa7c3b388cf075cf05b127202217dcebacf3558a7fcd6de1943769da66a196d165bdb8286ffb20482fd702c2cc9a6f98'
         },
         json: true
         }, (error, response, body)=>{
             jobApplications = body
-    request.get('https://hackicims.com/api/v1/companies/141/people', {
+    request.get('https://hackicims.com/api/v1/companies/144/people', {
         auth: {
             bearer: '996855af2954a57fe8e0285a74136151aa7c3b388cf075cf05b127202217dcebacf3558a7fcd6de1943769da66a196d165bdb8286ffb20482fd702c2cc9a6f98'
         },
@@ -65,7 +65,7 @@ app.post('/filter', function (req, res) {
         
             people = body
 
-            request.get('https://hackicims.com/api/v1/companies/141/jobs', {
+            request.get('https://hackicims.com/api/v1/companies/144/jobs', {
                 auth: {
                     bearer: '996855af2954a57fe8e0285a74136151aa7c3b388cf075cf05b127202217dcebacf3558a7fcd6de1943769da66a196d165bdb8286ffb20482fd702c2cc9a6f98'
                 },
