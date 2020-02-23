@@ -16,3 +16,6 @@ function handler1(checkNum, String) {
     if(beg.checked || med.checked || adv.checked) skill.checked = true;
     else skill.checked = false;
 }
+function submitForm() {
+    document.getElementById("filterForm").submit();
+}
