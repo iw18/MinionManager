@@ -25,6 +25,8 @@ for job in r:
 r = json.loads((requests.get("https://hackicims.com/api/v1/companies/141/people", headers=headers)).text)
 for person in r:
     person["skills"] = [{"name" : random.choice(skills), "level" : random.choice(levels)}]
+    for i in range(0, random.randint(0,3)):
+    	person["skills"].append({"name" : random.choice(skills), "level" : random.choice(levels)})
     payload = json.JSONEncoder().encode(person)
     r = requests.put("https://hackicims.com/api/v1/companies/141/people/" + str(person["id"]), data=payload, headers=headers)
 
