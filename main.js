@@ -4,6 +4,11 @@ var path = require('path')
 const port = 8000
 const request = require('request')
 
+const bodyParser = require('body-parser');
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
 app.use(express.json());
 app.use("/imgs", express.static(__dirname + "/imgs"));
 app.use("/css", express.static(__dirname + "/css"));
@@ -32,6 +37,8 @@ function passesReqs(person, states, skills, jobApplications){
 }
 
 app.post('/filter', function (req, res) {
+    console.log(req.body);
+    
     // TODO: choose those that actually applied for the job
     var jobApplications;
     // get applications so u can ??
