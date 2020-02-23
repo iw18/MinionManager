@@ -15,7 +15,7 @@
     <div class="dropdown">
       <img src="imgs/dropdown.png" alt="dropdown" width="1000" length="800">
 
-      <h2 class="choose-states">CHOOSE YOUR STATE</h2>
+      <h2 class="choose-states">CHOOSE YOUR STATES</h2>
 
       <div>
         <form id="filterForm" action="/filter" method="post">
@@ -74,7 +74,7 @@
       
     </div>
 
-    <form style="padding-left: 5%;" id="filterForm" action="/filter" method="post">
+    <form id="filterForm" action="/filter" method="post">
       <table>
         <tr>
           <th>Job Title</th>
@@ -102,117 +102,118 @@
               <label for="job1">Cook</label><br></td>
         </tr>
       </table>
-    
-
-    <table name = "skill">
-      <tr>
-        <th>Skill Type</th>
-        <th>Beginner</th>
-        <th>Medium</th>
-        <th>Advanced</th>
-      </tr>
-      <tr>
-        <td><input type="checkbox" id="skill1" name="Enth" value="Bike" onclick="handler('1')">
-          <label for="skill1">Enthusiasm</label><br></td>
-        <td><input type="checkbox" id="beg1" name="beg1" value="beg" onclick="handler1('1')">
-          <label for="beg"></label><br></td>
-        <td><input type="checkbox" id="med1" name="med1" value="med"  onclick="handler1('1')">
-          <label for="med"></label><br></td>
-        <td><input type="checkbox" id="adv1" name="adv1" value="adv"  onclick="handler1('1')">
-          <label for="adv"></label><br></td>                    
-      </tr>
-      <tr>
-        <td><input type="checkbox" id="skill2" name="Prog" value="Bike" onclick="handler('2')">
-          <label for="skill2">Programming</label><br></td>
-        <td><input type="checkbox" id="beg2" name="beg2" value="beg" onclick="handler1('2')">
-          <label for="beg"></label><br></td>
-        <td><input type="checkbox" id="med2" name="med2" value="med" onclick="handler1('2')">
-          <label for="med"></label><br></td>
-        <td><input type="checkbox" id="adv2" name="adv2" value="adv"  onclick="handler1('2')">
-          <label for="adv"></label><br></td>  
-      </tr>
-      <tr>
-        <td><input type="checkbox" id="skill3" name="Alch" value="Bike" onclick="handler('3')">
-          <label for="skill3">Alchemy</label><br></td>
-        <td><input type="checkbox" id="beg3" name="beg3" value="beg" onclick="handler1('3')">
-          <label for="beg"></label><br></td>
-        <td><input type="checkbox" id="med3" name="med3" value="med" onclick="handler1('3')">
-          <label for="med"></label><br></td>
-        <td><input type="checkbox" id="adv3" name="adv3" value="adv" onclick="handler1('3')">
-          <label for="adv"></label><br></td>  
-      </tr>
-      <tr>
-        <td><input type="checkbox" id="skill4" name="LackCrit" value="Bike" onclick="handler('4')">
-          <label for="skill4">Lack of Critical Thinking</label><br></td>
-        <td><input type="checkbox" id="beg4" name="beg4" value="beg" onclick="handler1('4')">
-          <label for="beg"></label><br></td>
-        <td><input type="checkbox" id="med4" name="med4" value="med" onclick="handler1('4')">
-          <label for="med"></label><br></td>
-        <td><input type="checkbox" id="adv4" name="adv4" value="adv" onclick="handler1('4')">
-          <label for="adv"></label><br></td>  
-      </tr>
-      <tr>
-        <td><input type="checkbox" id="skill5" name="Data" value="Bike" onclick="handler('5')">
-          <label for="skill5">Data Analysis</label><br></td>
-        <td><input type="checkbox" id="beg5" name="beg5" value="beg" onclick="handler1('5')">
-          <label for="beg"></label><br></td>
-        <td><input type="checkbox" id="med5" name="med5" value="med" onclick="handler1('5')">
-          <label for="med"></label><br></td>
-        <td><input type="checkbox" id="adv5" name="adv5" value="adv" onclick="handler1('5')">
-          <label for="adv"></label><br></td>  
-      </tr>
-      <tr>
-        <td><input type="checkbox" id="skill6" name="Engi" value="Bike" onclick="handler('6')">
-          <label for="skill6">Engineering</label><br></td>
-        <td><input type="checkbox" id="beg6" name="beg6" value="beg" onclick="handler1('6')">
-          <label for="beg"></label><br></td>
-        <td><input type="checkbox" id="med6" name="med6" value="med" onclick="handler1('6')">
-          <label for="med"></label><br></td>
-        <td><input type="checkbox" id="adv6" name="adv6" value="adv" onclick="handler1('6')">
-          <label for="adv"></label><br></td>  
-      </tr>
-      <tr>
-        <td><input type="checkbox" id="skill7" name="Musc" value="Bike" onclick="handler('7')">
-          <label for="skill7">Muscles</label><br></td>
-        <td><input type="checkbox" id="beg7" name="beg7" value="beg" onclick="handler1('7')">
-          <label for="beg"></label><br></td>
-        <td><input type="checkbox" id="med7" name="med7" value="med" onclick="handler1('7')">
-          <label for="med"></label><br></td>
-        <td><input type="checkbox" id="adv7" name="adv7" value="adv" onclick="handler1('7')">
-          <label for="adv"></label><br></td>  
-      </tr>
-      <tr>
-        <td><input type="checkbox" id="skill8" name="Commun" value="Bike" onclick="handler('8')">
-          <label for="skill8">Oral Communication</label><br></td>
-        <td><input type="checkbox" id="beg8" name="beg8" value="beg" onclick="handler1('8')">
-          <label for="beg"></label><br></td>
-        <td><input type="checkbox" id="med8" name="med8" value="med" onclick="handler1('8')">
-          <label for="med"></label><br></td>
-        <td><input type="checkbox" id="adv8" name="adv8" value="adv" onclick="handler1('8')">
-          <label for="adv"></label><br></td>  
-      </tr>
-      <tr>
-        <td><input type="checkbox" id="skill9" name="ProbSolv" value="Bike" onclick="handler('9')">
-          <label for="skill9">Problem Solving</label><br></td>
-        <td><input type="checkbox" id="beg9" name="beg9" value="beg" onclick="handler1('9')">
-          <label for="beg"></label><br></td>
-        <td><input type="checkbox" id="med9" name="med9" value="med" onclick="handler1('9')">
-          <label for="med"></label><br></td>
-        <td><input type="checkbox" id="adv9" name="adv9" value="adv" onclick="handler1('9')">
-          <label for="adv"></label><br></td>  
-      </tr>
-      <tr>
-        <td><input type="checkbox" id="skill10" name="Cook" value="Bike" onclick="handler('10')">
-          <label for="skill10">Cooking</label><br></td>
-        <td><input type="checkbox" id="beg10" name="beg10" value="beg" onclick="handler1('10')">
-          <label for="beg"></label><br></td>
-        <td><input type="checkbox" id="med10" name="med10" value="med" onclick="handler1('10')">   
-          <label for="med"></label><br></td>
-        <td><input type="checkbox" id="adv10" name="adv10" value="adv" onclick="handler1('10')">
-          <label for="adv"></label><br></td>  
-      </tr>
-    </table>
-    <input type="button" onclick="submitForm()" value="Submit form">
+    </form>
+     
+    <form id="filterForm" action="/filter" method="post">
+      <table>
+        <tr>
+          <th>Skill Type</th>
+          <th>Beginner</th>
+          <th>Medium</th>
+          <th>Advanced</th>
+        </tr>
+        <tr>
+          <td><input type="checkbox" id="skill1" name="skill1" value="Bike" onclick="handler('1')">
+            <label for="skill1">Enthusiasm</label><br></td>
+          <td><input type="checkbox" id="beg1" name="beg" value="beg" onclick="handler1('1')">
+            <label for="beg"></label><br></td>
+          <td><input type="checkbox" id="med1" name="med" value="med"  onclick="handler1('1')">
+            <label for="med"></label><br></td>
+          <td><input type="checkbox" id="adv1" name="adv" value="adv"  onclick="handler1('1')">
+            <label for="adv"></label><br></td>                    
+        </tr>
+        <tr>
+          <td><input type="checkbox" id="skill2" name="skill2" value="Bike" onclick="handler('2')">
+            <label for="skill2">Programming</label><br></td>
+          <td><input type="checkbox" id="beg2" name="beg" value="beg" onclick="handler1('2')">
+            <label for="beg"></label><br></td>
+          <td><input type="checkbox" id="med2" name="med" value="med" onclick="handler1('2')">
+            <label for="med"></label><br></td>
+          <td><input type="checkbox" id="adv2" name="adv" value="adv"  onclick="handler1('2')">
+            <label for="adv"></label><br></td>  
+        </tr>
+        <tr>
+          <td><input type="checkbox" id="skill3" name="skill3" value="Bike" onclick="handler('3')">
+            <label for="skill3">Alchemy</label><br></td>
+          <td><input type="checkbox" id="beg3" name="beg" value="beg" onclick="handler1('3')">
+            <label for="beg"></label><br></td>
+          <td><input type="checkbox" id="med3" name="med" value="med" onclick="handler1('3')">
+            <label for="med"></label><br></td>
+          <td><input type="checkbox" id="adv3" name="adv" value="adv" onclick="handler1('3')">
+            <label for="adv"></label><br></td>  
+        </tr>
+        <tr>
+          <td><input type="checkbox" id="skill4" name="skill4" value="Bike" onclick="handler('4')">
+            <label for="skill4">Lack of Critical Thinking</label><br></td>
+          <td><input type="checkbox" id="beg4" name="beg" value="beg" onclick="handler1('4')">
+            <label for="beg"></label><br></td>
+          <td><input type="checkbox" id="med4" name="med" value="med" onclick="handler1('4')">
+            <label for="med"></label><br></td>
+          <td><input type="checkbox" id="adv4" name="adv" value="adv" onclick="handler1('4')">
+            <label for="adv"></label><br></td>  
+        </tr>
+        <tr>
+          <td><input type="checkbox" id="skill5" name="skill5" value="Bike" onclick="handler('5')">
+            <label for="skill5">Data Analysis</label><br></td>
+          <td><input type="checkbox" id="beg5" name="beg" value="beg" onclick="handler1('5')">
+            <label for="beg"></label><br></td>
+          <td><input type="checkbox" id="med5" name="med" value="med" onclick="handler1('5')">
+            <label for="med"></label><br></td>
+          <td><input type="checkbox" id="adv5" name="adv" value="adv" onclick="handler1('5')">
+            <label for="adv"></label><br></td>  
+        </tr>
+        <tr>
+          <td><input type="checkbox" id="skill6" name="skill6" value="Bike" onclick="handler('6')">
+            <label for="skill6">Engineering</label><br></td>
+          <td><input type="checkbox" id="beg6" name="beg" value="beg" onclick="handler1('6')">
+            <label for="beg"></label><br></td>
+          <td><input type="checkbox" id="med6" name="med" value="med" onclick="handler1('6')">
+            <label for="med"></label><br></td>
+          <td><input type="checkbox" id="adv6" name="adv" value="adv" onclick="handler1('6')">
+            <label for="adv"></label><br></td>  
+        </tr>
+        <tr>
+          <td><input type="checkbox" id="skill7" name="skill7" value="Bike" onclick="handler('7')">
+            <label for="skill7">Muscles</label><br></td>
+          <td><input type="checkbox" id="beg7" name="beg" value="beg" onclick="handler1('7')">
+            <label for="beg"></label><br></td>
+          <td><input type="checkbox" id="med7" name="med" value="med" onclick="handler1('7')">
+            <label for="med"></label><br></td>
+          <td><input type="checkbox" id="adv7" name="adv" value="adv" onclick="handler1('7')">
+            <label for="adv"></label><br></td>  
+        </tr>
+        <tr>
+          <td><input type="checkbox" id="skill8" name="skill8" value="Bike" onclick="handler('8')">
+            <label for="skill8">Oral Communication</label><br></td>
+          <td><input type="checkbox" id="beg8" name="beg" value="beg" onclick="handler1('8')">
+            <label for="beg"></label><br></td>
+          <td><input type="checkbox" id="med8" name="med" value="med" onclick="handler1('8')">
+            <label for="med"></label><br></td>
+          <td><input type="checkbox" id="adv8" name="adv" value="adv" onclick="handler1('8')">
+            <label for="adv"></label><br></td>  
+        </tr>
+        <tr>
+          <td><input type="checkbox" id="skill9" name="skill9" value="Bike" onclick="handler('9')">
+            <label for="skill9">Problem Solving</label><br></td>
+          <td><input type="checkbox" id="beg9" name="beg" value="beg" onclick="handler1('9')">
+            <label for="beg"></label><br></td>
+          <td><input type="checkbox" id="med9" name="med" value="med" onclick="handler1('9')">
+            <label for="med"></label><br></td>
+          <td><input type="checkbox" id="adv9" name="adv" value="adv" onclick="handler1('9')">
+            <label for="adv"></label><br></td>  
+        </tr>
+        <tr>
+          <td><input type="checkbox" id="skill10" name="skill10" value="Bike" onclick="handler('10')">
+            <label for="skill10">Cooking</label><br></td>
+          <td><input type="checkbox" id="beg10" name="beg" value="beg" onclick="handler1('10')">
+            <label for="beg"></label><br></td>
+          <td><input type="checkbox" id="med10" name="med" value="med" onclick="handler1('10')">   
+            <label for="med"></label><br></td>
+          <td><input type="checkbox" id="adv10" name="adv" value="adv" onclick="handler1('10')">
+            <label for="adv"></label><br></td>  
+        </tr>
+      </table>
+      <input type="button" onclick="submitForm()" value="Submit form">
     </form>
 
   </head>
