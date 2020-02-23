@@ -21,7 +21,7 @@ app.get('/', function (req, res) {
 
 function passesReqs(person, states, skills, jobApplications){
 
-    /*if (states.indexOf(person.address.state) == -1) return false;
+    if (states.indexOf(person.address.state) == -1) return false;
     
     var hasMatchingSkillandLevel = false;
     for (var i = 0; i < person.skills.length; i++){
@@ -30,14 +30,15 @@ function passesReqs(person, states, skills, jobApplications){
         }
     }
     if (!hasMatchingSkillandLevel) return false;
-   */ 
+   
     if (!jobApplications.find(element => element.personId == person.id)) return false;
     
     return true;
 }
 
+const statesJSON = {'AK':'Alaska','AL':'Alabama','AR':'Arkansas','AS':'AmericanSamoa','AZ':'Arizona','CA':'California','CO':'Colorado','CT':'Connecticut','DC':'District of Columbia','DE':'Delaware','FL':'Florida','GA':'Georgia','GU':'Guam','HI':'Hawaii','IA':'Iowa','ID':'Idaho','IL':'Illinois','IN':'Indiana','KS':'Kansas','KY':'Kentucky','LA':'Louisiana','MA':'Massachusetts','MD':'Maryland','ME':'Maine','MI':'Michigan','MN':'Minnesota','MO':'Missouri','MP':'Northern Mariana Islands','MS':'Mississippi','MT':'Montana','NA':'National','NC':'North Carolina','ND':'North Dakota','NE':'Nebraska','NH':'New Hampshire','NJ':'New Jersey','NM':'New Mexico','NV':'Nevada','NY':'New York','OH':'Ohio','OK':'Oklahoma','OR':'Oregon','PA':'Pennsylvania','PR':'Puerto Rico','RI':'Rhode Island','SC':'South Carolina','SD':'South Dakota','TN':'Tennessee','TX':'Texas','UT':'Utah','VA':'Virginia','VI':'Virgin Islands','VT':'Vermont','WA':'Washington','WI':'Wisconsin','WV':'West Virginia','WY':'Wyoming'}
+
 app.post('/filter', function (req, res) {
-    console.log(req.body);
     
     var jobApplications;
     // get applications so u can ??
@@ -64,32 +65,41 @@ app.post('/filter', function (req, res) {
                 json: true
             }, (error, response, body)=>{
                 jobs = body;
+                
+                // empty responses should input nothing TODO: 400 error
+                
+                
                 var jobsArray = [];
                 for (var i = jobs.length - 1; i >= 0;i--){
                     if (req.body.jobs.indexOf(jobs[i].title) == -1){
                         jobsArray.push(jobs.id)
-//                        jobs.splice(i, 1); // i think i did this right
                     }
                 }
-
                 for (var i = jobApplications.length - 1; i >= 0; i--){
                     if (jobsArray.indexOf(jobApplications.jobId) == -1){
                         jobApplications.splice(i, 1);
                     }
                 }
 
-                var states = ['New York']
+                states = [];
+                for (var i = 0; i < req.body.states.length; i++){
+                    states.push(statesJSON[req.body.states[i].toUpperCase()])
+                }
 
                 // key is name, level is value
                 // this is just conversions
                 skills = {}
+                // TODO: remove states and jobs from the JSON.
                 for (var key in req.body){
                     skills[key] = []
-                    var value = body[key];
+                    var value = req.body[key];
                     if (typeof(value) == 'object' && value.indexOf('beg') != -1) skills[key].push('Beginner')
                     if (typeof(value) == 'object' && value.indexOf('med') != -1) skills[key].push('Advanced')
                     if (typeof(value) == 'object' && value.indexOf('adv') != -1) skills[key].push('Expert')
                 }
+
+console.log(jobApplications)
+
 
                 // filter over here
                 for (var i = people.length - 1; i >= 0; i--){

@@ -16,6 +16,15 @@ function handler1(checkNum, String) {
     if(beg.checked || med.checked || adv.checked) skill.checked = true;
     else skill.checked = false;
 }
+
 function submitForm() {
     document.getElementById("filterForm").submit();
+    /*var http = new XMLHttpRequest();
+    http.open("POST", "/filter", true);
+    http.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+    var params = "search=" + document.getElementById(filterForm).value; // probably use document.getElementById(...).value
+    http.send(params);
+    http.onload = function() {
+        alert(http.responseText);
+    }*/
 }
