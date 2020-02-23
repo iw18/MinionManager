@@ -14,7 +14,14 @@ app.use("/imgs", express.static(__dirname + "/imgs"));
 app.use("/css", express.static(__dirname + "/css"));
 app.use("/js", express.static(__dirname + "/js"));
 
-// respond with "hello world" when a GET request is made to the homepage
+
+
+const json2html = require('node-json2html');
+let template = {'<>':'li','html':'${firstName} ${middleName} ${lastName}'};
+
+
+
+
 app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname + '/index.html'));
 })
@@ -98,8 +105,6 @@ app.post('/filter', function (req, res) {
                     if (typeof(value) == 'object' && value.indexOf('adv') != -1) skills[key].push('Expert')
                 }
 
-console.log(jobApplications)
-
 
                 // filter over here
                 for (var i = people.length - 1; i >= 0; i--){
@@ -107,7 +112,12 @@ console.log(jobApplications)
                         people.splice(i, 1);
                 }
 
-            res.send(people);
+            console.log(people);
+            //res.send(people);
+            var html = json2html.transform(people, template)
+            // TODO: more json to html
+            
+            res.send(html);
             })
         })
     })
