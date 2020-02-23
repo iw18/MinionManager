@@ -18,13 +18,13 @@ function handler1(checkNum, String) {
 }
 
 function submitForm() {
-    document.getElementById("filterForm").submit();
-    /*var http = new XMLHttpRequest();
-    http.open("POST", "/filter", true);
-    http.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+    document.getElementById("filterForm").submit();return;
+    /*var xhr = new XMLHttpRequest();
+    xhr.open("POST", "/filter", true);
+    xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
     var params = "search=" + document.getElementById(filterForm).value; // probably use document.getElementById(...).value
-    http.send(params);
-    http.onload = function() {
+    xhr.send(params);
+    xhr.onload = function() {
         alert(http.responseText);
     }*/
 }
