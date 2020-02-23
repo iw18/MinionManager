@@ -69,12 +69,10 @@
             <option value="wi">Wisconsin</option>
             <option value="wy">Wyoming</option>
           </select>
-        </form>
       </div>
       
     </div>
 
-    <form id="filterForm" action="/filter" method="post">
       <table>
         <tr>
           <th>Job Title</th>
@@ -102,9 +100,7 @@
               <label for="job1">Cook</label><br></td>
         </tr>
       </table>
-    </form>
      
-    <form id="filterForm" action="/filter" method="post">
       <table>
         <tr>
           <th>Skill Type</th>
@@ -215,6 +211,13 @@
       </table>
       <input type="button" onclick="submitForm()" value="Submit form">
     </form>
+    
+    <script>
+    function submitForm(){
+        document.getElementById('filterForm').submit();
+    }
+    </script>
+    
 
   </head>
 

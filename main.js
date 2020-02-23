@@ -39,7 +39,6 @@ function passesReqs(person, states, skills, jobApplications){
 app.post('/filter', function (req, res) {
     console.log(req.body);
     
-    // TODO: choose those that actually applied for the job
     var jobApplications;
     // get applications so u can ??
     request.get('https://hackicims.com/api/v1/companies/141/applications', {
