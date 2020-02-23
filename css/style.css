@@ -1,3 +1,9 @@
+.largerCheckbox
+{
+	width: 30px;
+	height: 30px;
+}
+
 .center {
   display: block;
   margin-left: auto;
@@ -10,8 +16,8 @@
 }
 
 .flex-container > div {
-  width: 100px;
-  margin: 200px;
+  width: 300px;
+  margin: 100px;
   text-align: center;
   line-height: 75px;
   font-size: 30px;
@@ -47,8 +53,8 @@
   position: absolute; 
   margin-top: 50pt;
   margin-left: 100pt;
-  top: 70%; 
-  left: 8%; 
+  top: 50%; 
+  left: 2%; 
   width: 20%; 
   height: 300px;
 }
@@ -58,10 +64,10 @@
   font-size: 20px;
   position: absolute; 
   padding-left: 5%;
-  margin-top: 50pt;
-  margin-left: 100pt;
-  top: 70%; 
-  left: 33%; 
+  margin-top: 30pt;
+  margin-left: 50pt;
+  top: 50%; 
+  left: 31%; 
   width: 20%; 
   height: 300px;
 }
@@ -71,9 +77,9 @@
   font-size: 20px;
   position: absolute; 
   padding-left: 5%;
-  margin-top: 50pt;
-  margin-left: 50%;
-  top: 70%; 
+  margin-top: 0pt;
+  margin-left: 40%;
+  top: 50%; 
   left: 30%; 
   width: 20%; 
   height: 30px;
@@ -91,9 +97,9 @@ table {
 }
 
 td, th {
-  border: 1px solid #dddddd;
+  border: 0px solid #dddddd;
   text-align: center;
-  padding: 0px;
+  padding: 10px;
 }
 /* 
 tr:nth-child(even) {
